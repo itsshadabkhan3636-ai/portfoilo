@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Shadab Khan, Full Stack Python Developer. Portfolio of web projects built with Python, JavaScript, React and SQL.">
+<title>Shadab Khan | Full Stack Python Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#09090B;--bg2:#12101F;--a:#8B5CF6;--a2:#A855F7;--neon:#C084FC;--cy:#06B6D4;--tx:#F8FAFC;--mu:#A1A1AA;--glass:rgba(139,92,246,.08);--bd:rgba(139,92,246,.28);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px;height:100%}
+body{background:var(--bg);color:var(--tx);font:400 16px/1.7 'Inter',system-ui,sans-serif;overflow-x:hidden;min-height:100%;background-image:linear-gradient(rgba(139,92,246,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.05) 1px,transparent 1px);background-size:56px 56px}
+h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.orb{position:fixed;border-radius:50%;filter:blur(90px);z-index:0;pointer-events:none;animation:dr 14s ease-in-out infinite alternate}
+@keyframes dr{to{transform:translate(60px,-50px) scale(1.15)}}
+main,nav,footer{position:relative;z-index:1}
+.wrap{max-width:1120px;margin:auto;padding:0 20px}
+section{padding:90px 0}
+.glass{background:var(--glass);border:1px solid var(--bd);border-radius:20px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:transform .3s,box-shadow .3s,border-color .3s}
+.glass:hover{transform:translateY(-6px);border-color:var(--neon);box-shadow:0 0 34px rgba(139,92,246,.35)}
+.g{background:linear-gradient(90deg,var(--neon),var(--a),var(--cy));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(1.9rem,4.5vw,2.8rem);margin-bottom:14px}
+.lead{color:var(--mu);max-width:620px;margin-bottom:40px}
+nav{position:fixed;top:0;left:0;right:0;z-index:30;background:rgba(9,9,11,.7);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd);padding-top:env(safe-area-inset-top,0px)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font:700 1.2rem 'Space Grotesk',sans-serif}
+.links{display:flex;gap:24px}.links a{color:var(--mu);font-size:.92rem;transition:.2s}.links a:hover,.links a.on{color:var(--neon)}
+.burger{display:none;background:var(--glass);border:1px solid var(--bd);color:var(--tx);width:40px;height:40px;border-radius:10px;font-size:1.1rem;cursor:pointer}
+@media(max-width:860px){.burger{display:block}.links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg2);padding:18px 20px;gap:14px;border-bottom:1px solid var(--bd)}.links.open{display:flex}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:12px;font:600 .96rem 'Inter',sans-serif;border:1px solid var(--bd);color:var(--tx);cursor:pointer;background:var(--glass);transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 0 26px rgba(168,85,247,.5)}
+.pri{background:linear-gradient(90deg,var(--a),var(--a2));border-color:transparent;box-shadow:0 0 24px rgba(139,92,246,.45)}
+.btn[aria-disabled=true]{opacity:.5;cursor:not-allowed}
+.hero{min-height:100vh;display:flex;align-items:center;padding:110px 0 60px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center}
+.badge{display:inline-block;padding:7px 16px;border:1px solid var(--bd);background:var(--glass);border-radius:99px;color:var(--neon);font-weight:600;font-size:.78rem;letter-spacing:.08em;margin-bottom:20px}
+.hero .nm{color:var(--cy);font:500 1.15rem 'Space Grotesk',sans-serif}
+.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);margin:8px 0 18px}
+.hero p{color:var(--mu);max-width:520px;margin-bottom:28px}
+.row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--bd);background:var(--glass);transition:.25s}
+.ic:hover{box-shadow:0 0 20px rgba(192,132,252,.6);transform:translateY(-3px)}
+.ic svg{width:20px;height:20px;fill:var(--tx)}
+.vis{position:relative;aspect-ratio:1;width:100%;max-width:480px;margin:auto}
+#sph{width:100%;height:100%}
+.fc{position:absolute;padding:9px 16px;border-radius:14px;font:600 .85rem 'Space Grotesk',sans-serif;animation:fl 6s ease-in-out infinite}
+.fc.a{top:8%;left:2%}.fc.b{top:20%;right:0;animation-delay:-2s}.fc.c{bottom:22%;left:0;animation-delay:-4s}.fc.d{bottom:8%;right:6%;animation-delay:-1s}
+@keyframes fl{50%{transform:translateY(-14px)}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.vis{max-width:320px;order:-1}.hero{padding-top:100px}}
+.about{padding:34px;max-width:860px}.about p{color:var(--mu);margin-top:14px}.about p:first-child{margin:0}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.sk{padding:26px 18px;text-align:center}
+.sk i{display:grid;place-items:center;width:56px;height:56px;margin:0 auto 14px;border-radius:16px;font:700 1.05rem 'Space Grotesk',sans-serif;font-style:normal;color:#fff;background:linear-gradient(135deg,var(--a),var(--cy))}
+.pg{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.pj{overflow:hidden;display:flex;flex-direction:column}
+.pv{height:170px;display:grid;place-items:center;font:700 2.6rem 'Space Grotesk',sans-serif;background:radial-gradient(circle at 30% 20%,var(--a2),transparent 60%),linear-gradient(135deg,var(--bg2),#1e1038);border-bottom:1px solid var(--bd);color:var(--neon)}
+.pb{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pb p{color:var(--mu);font-size:.94rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px}.tags span{font-size:.76rem;padding:3px 11px;border-radius:99px;border:1px solid var(--bd);color:var(--neon)}
+.st{font-size:.76rem;color:var(--cy)}
+.pb .row{margin-top:auto;padding-top:8px}.pb .btn{padding:9px 16px;font-size:.85rem}
+.tl{position:relative;max-width:760px;padding-left:34px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--a),var(--cy));box-shadow:0 0 12px var(--a)}
+.ti{position:relative;padding:24px;margin-bottom:22px}
+.ti:before{content:"";position:absolute;left:-35px;top:30px;width:14px;height:14px;border-radius:50%;background:var(--neon);box-shadow:0 0 0 4px rgba(139,92,246,.3),0 0 16px var(--neon);animation:pl 2.4s infinite}
+@keyframes pl{50%{box-shadow:0 0 0 9px rgba(139,92,246,.05),0 0 20px var(--neon)}}
+.ti small{color:var(--cy);font-weight:600}.ti p{color:var(--mu);margin-top:6px}
+.cw{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media(max-width:860px){.cw{grid-template-columns:1fr}}
+form{padding:30px;display:grid;gap:16px}
+label{font-size:.88rem;color:var(--mu);display:grid;gap:6px}
+input,textarea{background:rgba(9,9,11,.6);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;color:var(--tx);font:inherit}
+input:focus,textarea:focus{outline:none;border-color:var(--neon);box-shadow:0 0 18px rgba(139,92,246,.4)}
+.info{padding:30px;display:grid;gap:18px;align-content:start}.info p{color:var(--mu)}
+#msg{font-size:.88rem;color:var(--cy)}
+footer{text-align:center;padding:30px 20px;color:var(--mu);border-top:1px solid var(--bd);font-size:.9rem}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s,transform .9s}.rv.in{opacity:1;transform:none}
+#cur{position:fixed;width:300px;height:300px;margin:-150px 0 0 -150px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.2),transparent 65%);pointer-events:none;z-index:0;display:none}
+@media(pointer:fine){#cur{display:block}}
+:focus-visible{outline:3px solid var(--cy);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}#cur{display:none!important}html{scroll-behavior:auto}}
+.about{display:grid;grid-template-columns:170px 1fr;gap:30px;align-items:center}
+.ph{width:170px;height:170px;border-radius:50%;object-fit:cover;border:2px solid var(--neon);box-shadow:0 0 30px rgba(139,92,246,.6)}
+@media(max-width:640px){.about{grid-template-columns:1fr;justify-items:center;text-align:center}}
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="orb" style="width:380px;height:380px;background:#8B5CF6;opacity:.22;top:-80px;left:-100px"></div>
+<div class="orb" style="width:320px;height:320px;background:#06B6D4;opacity:.14;bottom:5%;right:-90px;animation-delay:-5s"></div>
+<div id="cur" aria-hidden="true"></div>
+
+<nav><div class="wrap"><a class="logo" href="#home">Shadab<span class="g">.dev</span></a>
+<div class="links" id="links"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#journey">Education</a><a href="#contact">Contact</a></div>
+<button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button></div></nav>
+
+<main>
+<section class="hero" id="home"><div class="wrap">
+<div class="rv">
+<span class="badge">FULL STACK PYTHON DEVELOPER</span>
+<div class="nm">Hi, I'm Shadab Khan</div>
+<h1>Building the Future with <span class="g">Code &amp; AI.</span></h1>
+<p>I build modern web applications, intelligent digital experiences, and AI-powered solutions using Python and modern web technologies.</p>
+<div class="row"><a class="btn pri" href="#projects">Explore My Work</a><a class="btn" href="#contact">Let's Connect</a>
+<a class="ic" aria-label="GitHub (link coming soon)" aria-disabled="true" href="#contact"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+<a class="ic" aria-label="LinkedIn (link coming soon)" aria-disabled="true" href="#contact"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-1.9 3.7-1.9 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V21h-4z"/></svg></a></div>
+</div>
+<div class="vis"><canvas id="sph" aria-hidden="true"></canvas>
+<span class="fc glass a">Python</span><span class="fc glass b">React</span><span class="fc glass c">Web Development</span><span class="fc glass d">SQL</span></div>
+</div></section>
+
+<section id="about"><div class="wrap rv"><h2>Turning Ideas Into <span class="g">Intelligent Experiences.</span></h2>
+<div class="glass about"><img class="ph" src="WhatsApp Image 2026-10-10 at 3.11.57 PM.jpeg"/>
+<p>I enjoy Python development, frontend technologies and backend systems, and I'm interested in AI-powered projects. My focus is building user-friendly applications that are clean, fast and easy to use.</p></div></div></div></section>
+
+<section id="skills"><div class="wrap rv"><h2>Technical <span class="g">Skills</span></h2><p class="lead">The technologies I work with.</p>
+<div class="grid">
+<div class="glass sk"><i>Py</i><h3>Python</h3></div><div class="glass sk"><i>H5</i><h3>HTML</h3></div><div class="glass sk"><i>C3</i><h3>CSS</h3></div>
+<div class="glass sk"><i>JS</i><h3>JavaScript</h3></div><div class="glass sk"><i>Re</i><h3>React</h3></div><div class="glass sk"><i>SQL</i><h3>SQL</h3></div></div></div></section>
+
+<section id="projects"><div class="wrap rv"><h2>Featured <span class="g">Projects</span></h2><p class="lead">My own work, plus sample cards marked as examples that you can replace with real projects.</p>
+<div class="pg">
+<article class="glass pj"><div class="pv">CW</div><div class="pb"><h3>Certification Website</h3><p>A website to present and showcase certifications in a clean, easy-to-browse layout.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="row"><a class="btn" aria-disabled="true" href="#projects">GitHub</a><a class="btn" aria-disabled="true" href="#projects">Live Demo</a></div></div></article>
+<article class="glass pj"><div class="pv">DW</div><div class="pb"><h3>Dashboard Website</h3><p>A responsive dashboard that organises data into clear cards and sections.</p><div class="tags"><span>React</span><span>JavaScript</span><span>CSS</span></div><div class="row"><a class="btn" aria-disabled="true" href="#projects">GitHub</a><a class="btn" aria-disabled="true" href="#projects">Live Demo</a></div></div></article>
+<article class="glass pj"><div class="pv">SM</div><div class="pb"><span class="st">Example project</span><h3>Student Management System</h3><p>Sample card: a system to manage student records with a Python backend and SQL database.</p><div class="tags"><span>Python</span><span>SQL</span></div><div class="row"><a class="btn" aria-disabled="true" href="#projects">GitHub</a><a class="btn" aria-disabled="true" href="#projects">Live Demo</a></div></div></article>
+<article class="glass pj"><div class="pv">EC</div><div class="pb"><span class="st">Example project</span><h3>E-Commerce Website</h3><p>Sample card: an online store layout with product pages and a cart.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="row"><a class="btn" aria-disabled="true" href="#projects">GitHub</a><a class="btn" aria-disabled="true" href="#projects">Live Demo</a></div></div></article>
+</div></div></section>
+
+<section id="journey"><div class="wrap rv"><h2>Education &amp; <span class="g">Certifications</span></h2><p class="lead">Only verified details are shown here.</p>
+<div class="tl"><div class="glass ti"><small>Currently pursuing</small><h3>Bachelor of Science (B.Sc.)</h3><p>Pandit Jawaharlal Nehru Science and Arts College</p></div>
+<div class="glass ti"><small>Certification</small><h3>Python Full Stack</h3><p>Python, HTML, CSS, JavaScript, React and SQL.</p></div></div></div></section>
+
+<section id="contact"><div class="wrap rv"><h2>Have an Idea? <span class="g">Let's Build It.</span></h2><p class="lead">Send a message and it opens in WhatsApp, ready to send to me.</p>
+<div class="cw"><form class="glass" id="form"><label>Full name<input id="n" required autocomplete="name"></label><label>Email address<input id="e" type="email" required autocomplete="email"></label><label>Message<textarea id="m" rows="5" required></textarea></label><button class="btn pri" type="submit">Send Message</button><div id="msg" role="status"></div></form>
+<div class="glass info"><h3>Contact</h3><p>WhatsApp: +91 70588 70629</p><a class="btn" href="https://wa.me/917058870629">Chat on WhatsApp</a><p>GitHub, LinkedIn and email links will be added here.</p></div></div></div></section>
+</main>
+<footer>© 2026 Shadab Khan · Full Stack Python Developer</footer>
+
+<script>
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,small=innerWidth<700;
+function setup(id){var c=document.getElementById(id),x=c.getContext('2d');function r(){var d=devicePixelRatio||1,b=c.getBoundingClientRect();c.width=b.width*d;c.height=b.height*d;x.setTransform(d,0,0,d,0,0)}r();addEventListener('resize',r);return x}
+var bx=setup('bg'),sx=setup('sph'),P=[],i;
+for(i=0;i<(small?22:45);i++)P.push({x:Math.random(),y:Math.random(),s:Math.random()*1.8+.4,v:Math.random()*.0003+.0001});
+var N=small?60:90,S=[];for(i=0;i<N;i++){var y=1-2*i/(N-1),rr=Math.sqrt(1-y*y),t=i*2.39996;S.push([Math.cos(t)*rr,y,Math.sin(t)*rr])}
+var ang=0;
+function draw(){var W=innerWidth,H=innerHeight;bx.clearRect(0,0,W,H);bx.fillStyle='rgba(192,132,252,.6)';
+P.forEach(function(p){p.y-=p.v;if(p.y<0)p.y=1;bx.beginPath();bx.arc(p.x*W,p.y*H,p.s,0,6.3);bx.fill()});
+var c=document.getElementById('sph'),w=c.clientWidth,h=c.clientHeight,R=w*.34,cx=w/2,cy=h/2;sx.clearRect(0,0,w,h);
+var g=sx.createRadialGradient(cx,cy,0,cx,cy,R*1.5);g.addColorStop(0,'rgba(139,92,246,.35)');g.addColorStop(1,'transparent');sx.fillStyle=g;sx.fillRect(0,0,w,h);
+var co=Math.cos(ang),si=Math.sin(ang),Q=S.map(function(p){var X=p[0]*co+p[2]*si,Z=-p[0]*si+p[2]*co;return[cx+X*R,cy+p[1]*R,Z]});
+for(var a=0;a<N;a++)for(var b=a+1;b<N;b++){var dx=Q[a][0]-Q[b][0],dy=Q[a][1]-Q[b][1];if(dx*dx+dy*dy<(R*.42)*(R*.42)){sx.strokeStyle='rgba(168,85,247,'+(.1+.3*(Q[a][2]+1)/2)+')';sx.beginPath();sx.moveTo(Q[a][0],Q[a][1]);sx.lineTo(Q[b][0],Q[b][1]);sx.stroke()}}
+Q.forEach(function(q,k){sx.fillStyle=k%7?'#C084FC':'#06B6D4';sx.beginPath();sx.arc(q[0],q[1],1.5+1.5*(q[2]+1)/2,0,6.3);sx.fill()});
+ang+=.004;if(!rm)requestAnimationFrame(draw)}
+draw();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+var L=document.getElementById('links'),B=document.getElementById('burger');
+B.onclick=function(){var o=L.classList.toggle('open');B.setAttribute('aria-expanded',o)};
+L.onclick=function(){L.classList.remove('open')};
+var cu=document.getElementById('cur');if(!rm)addEventListener('mousemove',function(e){cu.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)'});
+document.getElementById('form').onsubmit=function(e){e.preventDefault();var t='Hi Shadab, I am '+n.value+' ('+document.getElementById('e').value+'). '+m.value;window.open('https://wa.me/917058870629?text='+encodeURIComponent(t),'_blank','noopener');document.getElementById('msg').textContent='Opening WhatsApp with your message.'};
+</script>
+</body>
+</html>
